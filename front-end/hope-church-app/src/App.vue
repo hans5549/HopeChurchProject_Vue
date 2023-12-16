@@ -1,15 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <v-app>
+    <LoginSignup />
+    <v-footer>
+      <DefaultFooter />
+    </v-footer>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import LoginSignup from './components/login-signup/login-signup.vue'
+import DefaultFooter from './components/layout/footer/default-footer.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    LoginSignup,
+    DefaultFooter
   }
 }
 </script>
