@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <LoginSignup />
+    <Signup />
     <v-footer>
       <DefaultFooter />
     </v-footer>
@@ -8,14 +8,14 @@
 </template>
 
 <script>
-import LoginSignup from './components/login-signup/login-signup.vue'
+import Signup from './page/signup.vue'
 import DefaultFooter from './components/layout/footer/default-footer.vue'
 
 export default {
   name: 'App',
   components: {
-    LoginSignup,
-    DefaultFooter
+    DefaultFooter,
+    Signup
   }
 }
 </script>

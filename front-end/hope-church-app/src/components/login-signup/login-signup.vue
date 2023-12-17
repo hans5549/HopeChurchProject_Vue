@@ -23,6 +23,10 @@
 
             <template v-slot:default="{ isActive }">
               <v-card title="忘記密碼？">
+                <template v-slot:append>
+                  <v-btn icon="$close" variant="text" @click="isActive.value = false"></v-btn>
+                </template>
+                <v-divider></v-divider>
                 <v-card-text>
                   <v-container>
                     <v-row>
@@ -33,8 +37,14 @@
                   </v-container>
                 </v-card-text>
                 <v-card-actions>
-                  <v-spacer></v-spacer>
-                  <v-btn block color="blue-darken-3" @click="isActive.value = false">送出</v-btn>
+                  <v-row wrap no-gutters>
+                      <v-col cols="6">
+                        <v-btn block color="red-darken-3" @click="isActive.value = false">取消</v-btn>
+                      </v-col>
+                      <v-col cols="6">
+                        <v-btn block class="mt-2" color="blue-darken-3" @click="isActive.value = false">送出</v-btn>
+                      </v-col>
+                    </v-row>
                 </v-card-actions>
               </v-card>
             </template>
